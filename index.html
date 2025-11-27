@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Premiação de Natação</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <h1>Medalhas de Natação</h1>
+
+      <div class="input-group">
+         <label for="tempo1">Tempo do Nadador 1:</label>
+         <input type="number" id="tempo1" placeholder="Digite o tempo em segundos">
+      </div>
+
+      <div class="input-group">
+         <label for="tempo2"> Tempo do Nadador 2:</label>
+         <input type="number" id="tempo2" placeholder="Digite o tempo em segundos">
+      </div>
+
+      <div class="input-group">
+         <label for="tempo3">Tempo do Nadador 3:</label>
+         <input type="number" id="tempo3" placeholder="Digite o tempo em segundos">
+      </div>
+
+      <button id="calcularBtn">Calcular Medalhas</button>
+
+      <div id="resultados" class="resultados">
+         <h2>Resultados:</h2>
+         <p> Ouro: <span id="ouro"></p>
+         <p> Prata: <span id="prata"></p>
+         <p> Bronze: <span id="bronze"></p>
+      </div>
+   </div>
+   <script src="script.js"></script>
+
+   </body>
+   </html>
