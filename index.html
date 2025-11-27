@@ -38,3 +38,104 @@
 
    </body>
    </html>
+
+   <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container{
+    background-color: turquoise;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: coral;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: blueviolet;
+}
+
+#resultado {
+    margin-top: 30px;
+    font-size: 18px;
+    color: navy;
+    font-weight: bold;
+}
+
+      <script>
+       const tempo1Input = document.getElementById('tempo1');
+    const tempo2Input = document.getElementById('tempo2');
+    const tempo3Input = document.getElementById('tempo3');
+    const calcularBtn = document.getElementById('calcularBtn');
+    const ouroSpan = document.getElementById ('ouro');
+    const prataSpan = document.getElementById ('prata');
+    const bronzeSpan = document.getElementById ('bronze');
+
+    calcularBtn.addEventListener('click' , calcularMedalhas);
+
+    function calcularMedalhas() {
+
+        const t1 = parseFloat(tempo1Input.value);
+        const t2 = parseFloat(tempo2Input.value);
+        const t3 = parseFloat(tempo3Input.value);
+
+
+        if (isNaN(t1) || isNaN(t2) || isNaN(t3)) {
+            alert('Por favor, insira tempos válidos para todos os nadadores.');
+        }
+
+
+        const tempos = [
+            { nadador: 1, tempo: t1 },
+            { nadador: 2, tempo: t2 },
+            { nadador: 3, tempo: t3 }
+        ];
+
+
+        tempos.sort((a,b) => a.tempo - b.tempo);
+
+
+
+
+        ouroSpan.textContent = tempos[0].nadador;
+        prataSpan.textContent = tempos[1].nadador;
+        bronzeSpan.textContent = tempos[2]. nadador;
+    }
